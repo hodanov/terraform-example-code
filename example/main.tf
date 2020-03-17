@@ -63,11 +63,7 @@ resource "aws_instance" "example" {
   }
 
   # Install Apache.
-  user_data = <<EOF
-    #!/bin/bash
-    yum install -y httpd
-    systemctl start httpd.service
-  EOF
+  user_data = file("./user_data.sh")
 }
 
 # Define a value to output to the terminal.
