@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "ap-northeast-1"
+}
+
 variable "instance_type" {}
 
 resource "aws_instance" "default" {
